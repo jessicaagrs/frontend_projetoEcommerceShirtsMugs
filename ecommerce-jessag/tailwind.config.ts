@@ -8,6 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        custom: {
+          logo: "#5D5D6D",
+          inputSearch: "#F3F5F6",
+          textDark: "#737380",
+          redIcons: "#DE3838",
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
