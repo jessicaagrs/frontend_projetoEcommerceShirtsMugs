@@ -8,7 +8,7 @@ export default function Cart() {
     return (
         <div className="relative">
             <CartIcon />
-            {value !== null && value !== '' && <CartNumberItems>{value}</CartNumberItems>}
+            {value !== null  || value !== '' && <CartNumberItems>{value}</CartNumberItems>}
         </div>
     );
 }

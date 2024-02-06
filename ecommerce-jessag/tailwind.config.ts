@@ -14,6 +14,8 @@ const config: Config = {
           inputSearch: "#F3F5F6",
           textDark: "#737380",
           redIcons: "#DE3838",
+          borderFilterByType: "#FFA585",
+          optionFilterByType: "#41414D",
         },
       },
       backgroundImage: {
