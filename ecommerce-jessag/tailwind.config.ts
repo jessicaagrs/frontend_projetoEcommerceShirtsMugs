@@ -13,9 +13,13 @@ const config: Config = {
           logo: "#5D5D6D",
           inputSearch: "#F3F5F6",
           textDark: "#737380",
+          textDarkIntense: "#41414D",
           redIcons: "#DE3838",
           borderFilterByType: "#FFA585",
           optionFilterByType: "#41414D",
+          shapesDark: "#09090A",
+          shapesDivisor: "#DCE2E6",
+          bgMain: "#F0F0F5"
         },
       },
       backgroundImage: {
@@ -23,6 +27,12 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      gridTemplateColumns: {
+        customGridRows: "repeat(auto-fill, 256px)",
+      },
+      zIndex: {
+        '999': '999'
+      }
     },
   },
   plugins: [],
