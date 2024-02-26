@@ -8,7 +8,9 @@ const sairaStencil = Saira_Stencil_One({
     weight: '400',
     subsets: ["latin"]
 });
+
 export default function Header() {
+
     return (
         <header className="flex justify-between items-center py-5 px-40">
             <a className={`${sairaStencil.className} text-custom-logo font-normal text-5xl`}>

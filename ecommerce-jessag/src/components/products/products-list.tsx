@@ -2,8 +2,6 @@
 import { useProducts } from "@/hooks/useProducts";
 import ProductCard from "./product-card";
 
-
-
 export default function ProductsList() {
     const { data } = useProducts();
 
