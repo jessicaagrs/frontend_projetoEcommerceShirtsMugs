@@ -3,6 +3,8 @@ import useFilter from "@/hooks/useFilter";
 export default function InputSearch() {
     const {setSearch, search} = useFilter();
 
+    console.log(search)
+
     return (
         <input
             type="search"

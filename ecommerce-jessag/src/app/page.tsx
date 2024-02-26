@@ -2,16 +2,13 @@
 import FilterByPriority from "@/components/filterBar/filter-by-priority";
 import FilterByType from "@/components/filterBar/filter-by-type";
 import ProductsList from "@/components/products/products-list";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 export default function Home() {
-  const client = new QueryClient();
   return (
-    <QueryClientProvider client={client}>
-      <main className="py-5 px-40  min-h-screen bg-custom-bgMain">
-        <section className="flex items-baseline justify-between">
+      <main className="py-5 px-40  min-h-screen bg-custom-bgMain max-[800px]:px-12">
+        <section className="flex items-baseline justify-between max-[800px]:flex max-[800px]:flex-col max-[800px]:gap-3">
           <FilterByType />
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 max-[800px]:flex max-[800px]:flex-row">
             <FilterByPriority />
             <div>teste</div>
           </div>
@@ -20,6 +17,5 @@ export default function Home() {
           <ProductsList />
         </section>
       </main>
-    </QueryClientProvider>
   );
 }
