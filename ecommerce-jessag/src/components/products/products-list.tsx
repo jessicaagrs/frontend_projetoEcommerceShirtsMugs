@@ -10,7 +10,8 @@ export default function ProductsList() {
             key={product.id}
             name={product.name}
             image={product.image_url}
-            price={product.price_in_cents} />)}
+            price={product.price_in_cents}
+            id={product.id} />)}
         </div>
     );
 };

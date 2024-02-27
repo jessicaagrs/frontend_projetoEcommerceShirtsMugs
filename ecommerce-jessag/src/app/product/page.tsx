@@ -5,8 +5,28 @@ import DefaultProvider from "@/contexts/default/defaultProvider";
 import useProductDetails from "@/hooks/useProductDetails";
 import { formatPrice } from "@/utils/format-price";
 
-export default function Product(params: { searchParams: { id: string }; }) {
-    const {data} = useProductDetails(params.searchParams.id);
+export default function Product(params: { searchParams: { id: string; }; }) {
+    const { data } = useProductDetails(params.searchParams.id);
+
+    const handleAddToCart = () => {
+        let cartItems = localStorage.getItem('cart-items');
+        if (cartItems) {
+            let cartItemsArray = JSON.parse(cartItems);
+            let existingProductIndex = cartItemsArray.findIndex((item: { id: string; }) => item.id === params.searchParams.id);
+
+            if (existingProductIndex != -1) {
+                cartItemsArray[existingProductIndex].quantity += 1;
+            } else {
+                cartItemsArray.push({ ...data, quantity: 1, id: params.searchParams.id });
+            }
+
+            localStorage.setItem('cart-items', JSON.stringify(cartItemsArray));
+        } else {
+            localStorage.setItem('cart-items', JSON.stringify([
+                { ...data, quantity: 1, id: params.searchParams.id }
+            ]));
+        }
+    };
 
     return (
         <DefaultProvider>
@@ -16,7 +36,7 @@ export default function Product(params: { searchParams: { id: string }; }) {
                 </div>
                 <div className="flex gap-8 max-[1024px]:flex max-[1024px]:flex-col">
                     <section>
-                       <img src={data?.image_url} alt="image product selected"/>
+                        <img src={data?.image_url} alt="image product selected" />
                     </section>
                     <section className="flex flex-col justify-between w-96 max-[1024px]:w-auto max-[1024px]:gap-8">
                         <div className="flex flex-col gap-5">
@@ -29,7 +49,9 @@ export default function Product(params: { searchParams: { id: string }; }) {
                             <h3 className="text-custom-textDark font-medium text-base">Descrição</h3>
                             <p className="text-custom-optionFilterByType font-normal text-sm">{data?.description}</p>
                         </div>
-                        <button className="h-11 rounded bg-custom-btnAddCart text-custom-btnTextAddCart uppercase flex items-center justify-center gap-3">
+                        <button
+                            onClick={handleAddToCart}
+                            className="h-11 rounded bg-custom-btnAddCart text-custom-btnTextAddCart uppercase flex items-center justify-center gap-3">
                             <ButtonAddCartIcon />
                             Adicionar ao carrinho
                         </button>

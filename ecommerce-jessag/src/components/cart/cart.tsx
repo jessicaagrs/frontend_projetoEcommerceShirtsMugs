@@ -1,14 +1,15 @@
 import useLocalStorage from "@/hooks/useLocalStorage";
 import CartIcon from "./cart-icon";
 import CartNumberItems from "./cart-number-items";
+import { CartItem } from "@/types/products";
 
 export default function Cart() {
-    const { value } = useLocalStorage('cart-items', 0);
-    
+    const { value }: CartItem = useLocalStorage('cart-items', []);
+
     return (
         <div className="relative">
             <CartIcon />
-            {value > 0 && <CartNumberItems>{value}</CartNumberItems>}
+            {value.length > 0 && Array.isArray(value) && <CartNumberItems>{value.length}</CartNumberItems>}
         </div>
     );
 }
