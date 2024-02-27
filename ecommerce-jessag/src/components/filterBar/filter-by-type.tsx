@@ -20,11 +20,11 @@ export default function FilterByType() {
                 Todos os produtos
             </li>
             <li
-                className={`font-normal cursor-pointer text-base text-center uppercase ${type === FilterByTypeEnum.CAMISETAS ? 'text-custom-optionFilterByType border-b-custom-borderFilterByType border-b-4' : 'text-custom-textDark'}`}
+                className={`font-normal cursor-pointer text-base text-center uppercase max-[800px]:text-sm ${type === FilterByTypeEnum.CAMISETAS ? 'text-custom-optionFilterByType border-b-custom-borderFilterByType border-b-4' : 'text-custom-textDark'}`}
                 onClick={() => handleChangeType(FilterByTypeEnum.CAMISETAS)}>Camisetas
             </li>
             <li
-                className={`font-normal cursor-pointer text-base text-center uppercase ${type === FilterByTypeEnum.CANECAS ? 'text-custom-optionFilterByType border-b-custom-borderFilterByType border-b-4' : 'text-custom-textDark'}`}
+                className={`font-normal cursor-pointer text-base text-center uppercase max-[800px]:text-sm ${type === FilterByTypeEnum.CANECAS ? 'text-custom-optionFilterByType border-b-custom-borderFilterByType border-b-4' : 'text-custom-textDark'}`}
                 onClick={() => handleChangeType(FilterByTypeEnum.CANECAS)}>Canecas
             </li>
         </ul>

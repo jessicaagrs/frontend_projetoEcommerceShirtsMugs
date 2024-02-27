@@ -12,9 +12,9 @@ const sairaStencil = Saira_Stencil_One({
 export default function Header() {
 
     return (
-        <header className="flex justify-between items-center py-5 px-40 max-[800px]:flex max-[800px]:flex-col max-[800px]:gap-3">
-            <a className={`${sairaStencil.className} text-custom-logo font-normal text-5xl  max-[800px]:text-2xl`}>
-                Ecommerce
+        <header className="flex justify-between items-center py-5 px-40 max-[800px]:flex max-[800px]:flex-col max-[1024px]:gap-5">
+            <a className={`${sairaStencil.className} text-custom-logo font-normal text-5xl text-nowrap max-[800px]:text-2xl`}>
+                T-Shirt & Mugs
             </a>
             <div className="relative w-80">
                 <InputSearch />

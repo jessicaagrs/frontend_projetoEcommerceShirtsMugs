@@ -17,7 +17,6 @@ const fetcher = (query: string): AxiosPromise<ProductsFetchResponse> => {
 export function useProducts() {
     const { type, priority, search } = useFilter();
     const searchDeferred = useDeferredValue(search);
-    console.log(search);
     const query = mountQuery(type, priority);
     const { data } = useQuery({
         queryFn: () => fetcher(query),

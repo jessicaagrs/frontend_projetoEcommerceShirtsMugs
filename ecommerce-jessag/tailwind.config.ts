@@ -19,7 +19,9 @@ const config: Config = {
           optionFilterByType: "#41414D",
           shapesDark: "#09090A",
           shapesDivisor: "#DCE2E6",
-          bgMain: "#F0F0F5"
+          bgMain: "#F0F0F5",
+          btnAddCart: "#115D8C",
+          btnTextAddCart: "#F5F5FA"
         },
       },
       backgroundImage: {
