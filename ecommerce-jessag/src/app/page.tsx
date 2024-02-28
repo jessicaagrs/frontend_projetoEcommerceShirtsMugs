@@ -1,6 +1,7 @@
 'use client';
 import FilterByPriority from "@/components/filterBar/filter-by-priority";
 import FilterByType from "@/components/filterBar/filter-by-type";
+import Paginator from "@/components/pagination/paginator";
 import ProductsList from "@/components/products/products-list";
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
         <FilterByType />
         <div className="flex flex-col gap-4 max-[1280px]:flex max-[1280px]:flex-row">
           <FilterByPriority />
-          <div>teste</div>
+          <Paginator />
         </div>
       </section>
       <section className="flex flex-col items-center mt-8">

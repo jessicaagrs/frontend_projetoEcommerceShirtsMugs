@@ -27,14 +27,14 @@ function getFieldByPriority(priority: PriorityTypeEnum) {
     };
 }
 
-export const mountQuery = (type: FilterByTypeEnum, priority: PriorityTypeEnum) => {
+export const mountQuery = (type: FilterByTypeEnum, priority: PriorityTypeEnum, page : number) => {
 
     const sortSettings = getFieldByPriority(priority);
     const categoryFilter = getCategory(type);
 
     if (type === FilterByTypeEnum.TODOSOSPRODUTOS) {
         return `query {
-            allProducts (${categoryFilter ? `filter: {category: "${categoryFilter}"}` : ''}, sortField: "${sortSettings.field}", sortOrder: "${sortSettings.order}") {
+            allProducts (${page > 0 ? `page: ${page}, perPage: 10,` : ''} ${categoryFilter ? `filter: {category: "${categoryFilter}"}` : ''}, sortField: "${sortSettings.field}", sortOrder: "${sortSettings.order}") {
               id
               name
               price_in_cents
@@ -46,7 +46,7 @@ export const mountQuery = (type: FilterByTypeEnum, priority: PriorityTypeEnum) =
 
     if (type === FilterByTypeEnum.CAMISETAS) {
         return `query {
-            allProducts(${categoryFilter ? `filter: {category: "${categoryFilter}"}` : ''}, sortField: "${sortSettings.field}", sortOrder: "${sortSettings.order}") {
+            allProducts(${page > 0 ? `page: ${page}, perPage: 10,` : ''} ${categoryFilter ? `filter: {category: "${categoryFilter}"}` : ''}, sortField: "${sortSettings.field}", sortOrder: "${sortSettings.order}") {
               id
               name
               price_in_cents
@@ -57,7 +57,7 @@ export const mountQuery = (type: FilterByTypeEnum, priority: PriorityTypeEnum) =
     }
     if (type === FilterByTypeEnum.CANECAS) {
         return `query {
-            allProducts(${categoryFilter ? `filter: {category: "${categoryFilter}"}` : ''}, sortField: "${sortSettings.field}", sortOrder: "${sortSettings.order}") {
+            allProducts(${page > 0 ? `page: ${page}, perPage: 10,` : ''} ${categoryFilter ? `filter: {category: "${categoryFilter}"}` : ''}, sortField: "${sortSettings.field}", sortOrder: "${sortSettings.order}") {
               id
               name
               price_in_cents
@@ -65,7 +65,7 @@ export const mountQuery = (type: FilterByTypeEnum, priority: PriorityTypeEnum) =
             }
           }
           `;
-    }
+    } 
 
     return `query {
         allProducts {

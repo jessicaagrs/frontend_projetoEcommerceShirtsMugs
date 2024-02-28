@@ -25,7 +25,9 @@ const config: Config = {
           bgCartItems: "#FFFFFF",
           bgSelectQuantity: "#F3F5F6",
           textSelectQuantity: "#A8A8B3",
-          textBtnBuy: "#51B853"
+          textBtnBuy: "#51B853",
+          bgBtnPaginator: "#E9E9F0",
+          borderBtnPaginator: "#FFA585"
         },
       },
       height: {

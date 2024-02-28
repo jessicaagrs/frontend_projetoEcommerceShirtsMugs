@@ -4,14 +4,6 @@ import FilterPriorityIcon from "./filter-by-priority-icon";
 import useFilter from "@/hooks/useFilter";
 import { PriorityTypeEnum } from "@/types/priority-types";
 
-interface FilterByPriority {
-
-};
-
-type FilterByPriorityProps = {
-
-};
-
 export default function FilterByPriority() {
     const [isOpen, setIsOpen] = useState(false);
     const { setPriority } = useFilter();
@@ -22,7 +14,6 @@ export default function FilterByPriority() {
         setPriority(priority);
         setIsOpen(false);
     };
-
 
     return (
         <div className="flex items-center relative">
