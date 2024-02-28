@@ -30,15 +30,15 @@ export default function Product(params: { searchParams: { id: string; }; }) {
 
     return (
         <DefaultProvider>
-            <main className="py-5 px-40  min-h-screen flex flex-col gap-3 bg-custom-bgMain max-[800px]:px-12">
+            <main className="py-5 px-40  min-h-screen flex flex-col gap-3 bg-custom-bgMain max-[1280px]:px-12">
                 <div>
                     <ButtonBackPageIcon path="/" />
                 </div>
-                <div className="flex gap-8 max-[1024px]:flex max-[1024px]:flex-col">
+                <div className="flex gap-8 max-[1280px]:flex max-[1280px]:flex-col">
                     <section>
                         <img src={data?.image_url} alt="image product selected" />
                     </section>
-                    <section className="flex flex-col justify-between w-96 max-[1024px]:w-auto max-[1024px]:gap-8">
+                    <section className="flex flex-col justify-between w-96 max-[1280px]:w-auto max-[1280px]:gap-8">
                         <div className="flex flex-col gap-5">
                             <span className="font-normal text-base text-custom-optionFilterByType">{data?.category}</span>
                             <h2 className="font-light text-4xl text-custom-optionFilterByType">{data?.name}</h2>

@@ -33,7 +33,7 @@ export default function FilterByPriority() {
                 <FilterPriorityIcon />
             </button>
             {isOpen && (
-                <ul className="absolute py-3 px-4 bg-white shadow-xl w-56 top-full right-2.5 z-999 max-[800px]:left-2.5">
+                <ul className="absolute py-3 px-4 bg-white shadow-xl w-56 top-full right-2.5 z-999 max-[1280px]:left-2.5">
                     <li
                         className="cursor-pointer text-custom-textDark"
                         onClick={() => handleUpdatePriority(PriorityTypeEnum.NOVIDADES)}>

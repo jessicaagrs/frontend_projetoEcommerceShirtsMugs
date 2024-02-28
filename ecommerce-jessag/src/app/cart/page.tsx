@@ -15,6 +15,8 @@ export default function Cart() {
     };
 
     const cardTotal = calculateTotal(value);
+    const deliveryTax = 4000;
+    const cardTotalWithDelivery = calculateTotal(value) + deliveryTax;
 
     const handleUpdateQuantity = (id: string, quantity: number) => {
         const newValue: any = value.map((item: Products) => {
@@ -33,13 +35,14 @@ export default function Cart() {
 
     return (
         <DefaultProvider>
-            <main className="py-5 px-40  min-h-screen flex gap-3 bg-custom-bgMain max-[800px]:px-12">
+            <main className="py-5 px-40  min-h-screen flex gap-3 bg-custom-bgMain max-[1280px]:px-12 max-[1280px]:flex-col">
                 <section>
                     <ButtonBackPageIcon path="/" />
                     <h2 className="uppercase font-medium text-2xl my-3.5 text-custom-optionFilterByType">Seu carrinho</h2>
                     <span className="font-light text-base text-custom-optionFilterByType">{`Total (${value.length} produtos)`}</span>
                     <span className="font-medium text-base text-custom-optionFilterByType">{` ${formatPrice(cardTotal)}`}</span>
-                    {value.map((product) => <CartList
+                    {value.map((product : Products) => <CartList
+                        key={product.id}
                         product={product}
                         handleUpdateQuantity={handleUpdateQuantity}
                         handleDeleteItem={handleDeleteItem}
@@ -47,7 +50,7 @@ export default function Cart() {
                     )}
                 </section>
                 <section>
-                    <CartResult />
+                    <CartResult totalWithDelivery={cardTotalWithDelivery} total={cardTotal} deliveryTax={deliveryTax} />
                 </section>
             </main>
         </DefaultProvider>
