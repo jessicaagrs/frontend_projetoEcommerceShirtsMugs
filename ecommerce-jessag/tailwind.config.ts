@@ -21,8 +21,18 @@ const config: Config = {
           shapesDivisor: "#DCE2E6",
           bgMain: "#F0F0F5",
           btnAddCart: "#115D8C",
-          btnTextAddCart: "#F5F5FA"
+          btnTextAddCart: "#F5F5FA",
+          bgCartItems: "#FFFFFF",
+          bgSelectQuantity: "#F3F5F6",
+          textSelectQuantity: "#A8A8B3",
+          textBtnBuy: "#51B853"
         },
+      },
+      height: {
+        'custom-cart-result': '500px',
+      },
+      width: {
+        'custom-cart-result': '352px',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

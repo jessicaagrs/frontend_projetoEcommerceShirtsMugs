@@ -31,10 +31,11 @@ export default function useProductDetails(id: string) {
     const { data } = useQuery({
         queryFn: () => fetcher(id),
         queryKey: ['product', id],
-        enabled: !!id
+        enabled: !!id,
+        staleTime: 1000 * 60 * 5,
     });
 
     return {
         data: data?.data?.data?.Product
-    }
+    };
 };
