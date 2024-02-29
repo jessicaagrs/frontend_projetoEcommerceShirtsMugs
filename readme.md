@@ -42,17 +42,17 @@ Status do Projeto: :heavy_check_mark: <!-- > :heavy_check_mark:--> Concluído <!
 ## Descrição do projeto :pencil:
 
 <p align="justify">
- Projeto de ecommerce para venda de canecas e camisetas, com base no desafio proposto pela Rocketseat [Ver mais](https://github.com/Rocketseat/frontend-challenge)
+ Projeto de ecommerce para venda de canecas e camisetas, com base no desafio proposto pela Rocketseat <a href="https://github.com/Rocketseat/frontend-challenge">Ver mais</a>
 </p>
 
 ## Funcionalidades :wrench:
 
-:heavy_check_mark: Paginação de produtos;
-:heavy_check_mark: Filtragem por categorias;
-:heavy_check_mark: Pesquisa por nome de produto;
-:heavy_check_mark: Adicionar e remover produtos do carrinho;
-:heavy_check_mark: Chekout dos valores no carrinho;
-:heavy_check_mark: Organizar por datas;
+<p>:heavy_check_mark: Paginação de produtos;</p>
+<p>:heavy_check_mark: Filtragem por categorias;</p>
+<p>:heavy_check_mark: Pesquisa por nome de produto;</p>
+<p>:heavy_check_mark: Adicionar e remover produtos do carrinho;</p>
+<p>:heavy_check_mark: Chekout dos valores no carrinho;</p>
+<p>:heavy_check_mark: Organizar por datas;</p>
 
 ## Layout :dash:
 
