@@ -35,7 +35,7 @@ Status do Projeto: :heavy_check_mark: <!-- > :heavy_check_mark:--> Concluído <!
 
 :small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
 
-:small_blue_diamond: [Observações](#obsevações-ledger)
+:small_blue_diamond: [Observações](#observações-ledger)
 
 <!-- :small_blue_diamond: [Dependencias e libs utilizadas](#dependencias-e-libs-utilizadas-books) -->
 
