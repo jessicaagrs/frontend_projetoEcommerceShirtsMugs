@@ -9,7 +9,7 @@ export default function Home() {
     <main className="py-5 px-40  min-h-screen bg-custom-bgMain max-[1280px]:px-12">
       <section className="flex items-baseline justify-between max-[1280px]:flex max-[1280px]:flex-col max-[1280px]:gap-3">
         <FilterByType />
-        <div className="flex flex-col gap-4 max-[1280px]:flex max-[1280px]:flex-row">
+        <div className="flex flex-col items-end gap-4 max-[1280px]:items-start">
           <FilterByPriority />
           <Paginator />
         </div>
