@@ -80,10 +80,8 @@ No terminal:
 ```
 git clone https://github.com/jessicaagrs/frontend_projetoEcommerceShirtsMugs.git
 
-cd api
-yarn start
-
 cd ecommerce-shirtsmugs
+npm install
 npm run dev
 
 ```
